@@ -28,7 +28,7 @@ class initHandler:
 
 		# Convert the file path to the path to the decomposed region file instead.
 		k = len(regionfile)-8
-		regionfile = regionfile[0:k] + "_decomposed.regions"
+		#regionfile = regionfile[0:k] + "_decomposed.regions"
          	# Multiply the initial pose by the calibration constants from specEditor.
 		initial_pose = [region_calib[0]*center[0], region_calib[1]*center[1]]
 		# Convert this initial (x,y) pose to (x,y,z) pose in the simulator.
