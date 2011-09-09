@@ -1,0 +1,17 @@
+Name: # Name for this lab configuration
+Gazebo 
+
+InitializationHandler:
+handlers.init.pr2GazeboInit
+
+PoseHandler:
+handlers.pose.pr2GazeboPose
+
+SensorHandler:
+handlers.sensor.dummySensor
+
+ActuatorHandler:
+handlers.actuator.dummyActuator
+
+LocomotionCommandHandler:
+handlers.locomotionCommand.pr2GazeboLocomotionCommand
