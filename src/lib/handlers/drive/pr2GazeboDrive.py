@@ -54,7 +54,9 @@ class driveHandler:
                 twist.linear.x = v * 10 
                 twist.linear.y = w * 10
 	except: 
-	    print "Something went wrong with the driver handler" 
+	    twist.linear.x = v * 10
+            twist.linear.y = w * 10
+ 
 
         self.loco.sendCommand(twist)
 
