@@ -1,0 +1,28 @@
+# This is a region definition file for the LTLMoP toolkit.
+# Format details are described at the beginning of each section below.
+# Note that all values are separated by *tabs*.
+
+Background: # Relative path of background image file
+None
+
+CalibrationPoints: # Vertices to use for map calibration: (vertex_region_name, vertex_index)
+
+Regions: # Name, Type, Pos X, Pos Y, Width, Height, Color R, Color G, Color B, Vertices (x1, y1, x2, y2, ...)
+room4	rect	470	286	192	252	255	165	0
+room2	rect	470	52	192	234	0	255	0
+room3	rect	79	292	196	246	18	0	255
+room1	rect	79	52	196	240	255	255	0
+hallway	poly	275	52	195	486	160	32	240	0	240	0	0	195	0	195	234	195	486	0	486
+boundary	rect	11	8	761	606	255	255	0
+
+Thumbnail: # Relative path of image file that has region shapes overlayed on background image
+tgrasp_pr2_simbg.png
+
+Transitions: # Region 1 Name, Region 2 Name, Bidirectional transition faces (face1_x1, face1_y1, face1_x2, face1_y2, face2_x1, ...)
+room4	room2	470	286	662	286
+room4	hallway	470	286	470	538
+room2	hallway	470	52	470	286
+room3	room1	79	292	275	292
+room3	hallway	275	292	275	538
+room1	hallway	275	52	275	292
+
